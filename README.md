@@ -15,4 +15,21 @@ Este proyecto es una solución inteligente y escalable para automatizar la atenc
 🔹 Guarda los datos en una planilla de Google Sheets para su posterior análisis.
 
 🔹 Envía notificaciones por email o Telegram con la información procesada.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🛠️ Tecnologías utilizadas
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HTML/CSS para el frontend del formulario.
+
+n8n (orquestador visual de flujos de trabajo).
+
+OpenAI API para generación de respuestas inteligentes.
+
+Google Sheets API para almacenar los datos.
+
+SMTP / Telegram API para notificaciones automáticas.
+
+Docker + Docker Compose para desarrollo local y portabilidad.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
