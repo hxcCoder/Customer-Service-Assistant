@@ -79,7 +79,9 @@ Este proyecto es una solución inteligente y escalable para automatizar la atenc
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -Abre http://localhost:5678
 
+
 -Importa el flujo incluido (workflow.json)
+
 
 -Reemplaza tus credenciales (OpenAI, Gmail, Google Sheets)
 
