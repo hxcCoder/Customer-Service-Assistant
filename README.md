@@ -126,7 +126,7 @@ Este proyecto es una solución inteligente y escalable para automatizar la atenc
 
 ¿Te interesa colaborar o mejorar esta solución? ¡Estoy disponible para propuestas freelance o trabajo remoto!
 
-Autor: [Tu nombre]Email: [tuemail@ejemplo.com]LinkedIn: [tu-linkedin]Portafolio: [tu-sitio.com]
+Autor: [Benjamin] Email: [benjaminmillalonc@gmail.com] LinkedIn: []Portafolio: [tu-sitio.com]
 
 ¡Gracias por revisar este proyecto! ⭐ Si te gustó, dale una estrella al repo o compártelo.
 
