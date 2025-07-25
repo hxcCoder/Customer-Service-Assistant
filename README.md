@@ -62,14 +62,14 @@ Este proyecto es una solución inteligente y escalable para automatizar la atenc
 ⚙️ Cómo ejecutarlo localmente
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-1. Clonar el repositorio
+1.  Clonar el repositorio
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     git clone https://github.com/tuusuario/asistente-ia-n8n.git
     cd asistente-ia-n8n
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-2. Levantar n8n con Docker
+2.  Levantar n8n con Docker
 
         docker-compose up -d
 
@@ -83,7 +83,7 @@ Este proyecto es una solución inteligente y escalable para automatizar la atenc
 -Reemplaza tus credenciales (OpenAI, Gmail, Google Sheets)
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-4. Probar el formulario
+4.  Probar el formulario
 
 -Abre el archivo index.html en tu navegador y envía un mensaje.
 
