@@ -21,15 +21,19 @@ Este proyecto es una solución inteligente y escalable para automatizar la atenc
 🛠️ Tecnologías utilizadas
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-HTML/CSS para el frontend del formulario.
+-HTML/CSS para el frontend del formulario.
 
-n8n (orquestador visual de flujos de trabajo).
+-n8n (orquestador visual de flujos de trabajo).
 
-OpenAI API para generación de respuestas inteligentes.
+-OpenAI API para generación de respuestas inteligentes.
 
-Google Sheets API para almacenar los datos.
+-Google Sheets API para almacenar los datos.
 
-SMTP / Telegram API para notificaciones automáticas.
+-SMTP / Telegram API para notificaciones automáticas.
 
-Docker + Docker Compose para desarrollo local y portabilidad.
+-Docker + Docker Compose para desarrollo local y portabilidad.
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🎯 Casos de uso reales
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+✅ Atención al cliente automatizada para sitios web o ecommerce.✅ Formulario de contacto que responde automáticamente con IA.✅ Registro de leads o consultas en hojas de cálculo.✅ Notificaciones internas al equipo de ventas o soporte.✅ Automatización de respuestas a encuestas o solicitudes.
