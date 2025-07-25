@@ -1,0 +1,317 @@
+{
+  "name": "Formulario web v2",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "test-form",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -96,
+        -16
+      ],
+      "id": "22b5225c-4df2-4831-9a4c-d6c4f99ad3e8",
+      "name": "Webhook",
+      "webhookId": "07dffe94-4970-42ab-9c10-f538f873203b"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4.1",
+          "mode": "list",
+          "cachedResultName": "GPT-4.1"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "Eres un asistente de atención. Clasifica el siguiente mensaje en una de estas categorías: 'reclamo', 'consulta', 'venta', 'soporte técnico'. Devuelve solo la categoría.",
+              "role": "system"
+            },
+            {
+              "content": "={{ $json.Mensaje }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        896,
+        -16
+      ],
+      "id": "3dfa0568-ea74-412b-a5d2-b6c58ed437a2",
+      "name": "Message a model",
+      "alwaysOutputData": true,
+      "retryOnFail": true,
+      "credentials": {
+        "openAiApi": {
+          "id": "QsjMC6RMpl7eNKWE",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        112,
+        -16
+      ],
+      "id": "d3794a7b-96ff-4798-86ae-9afc35392042",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "content": "Recibe los datos del formulario",
+        "height": 128,
+        "width": 192
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -144,
+        -64
+      ],
+      "typeVersion": 1,
+      "id": "9400ff5a-ba33-4348-bd0b-316e5851ecd2",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "Limpia, edita y renombra los campos",
+        "height": 128,
+        "width": 192
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        64,
+        -64
+      ],
+      "typeVersion": 1,
+      "id": "eeec6f44-beb1-4c52-bd81-cba3c2275ab3",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "Responde usando inteligencia artificial GPT-4 (nodo ya integrado)."
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        832,
+        -96
+      ],
+      "typeVersion": 1,
+      "id": "cc9824cd-ef2e-46e7-8696-68352343eb2d",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1SVTmxDLrW9vuzG6DdjeHfOOwQeb8zgrcQqsgNSfNiL4",
+          "mode": "list",
+          "cachedResultName": "Formulario web v2",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1SVTmxDLrW9vuzG6DdjeHfOOwQeb8zgrcQqsgNSfNiL4/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Hoja 1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1SVTmxDLrW9vuzG6DdjeHfOOwQeb8zgrcQqsgNSfNiL4/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Nombre ": "={{ $('Webhook').item.json.body.nombre }}",
+            "Email": "={{ $('Webhook').item.json.body.email }}",
+            "Mensaje": "={{ $('Webhook').item.json.body.mensaje }}",
+            "Fecha": "={{ $('Webhook').item.json.body.fecha }}"
+          },
+          "matchingColumns": [
+            "Nombre "
+          ],
+          "schema": [
+            {
+              "id": "Nombre ",
+              "displayName": "Nombre ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Email",
+              "displayName": "Email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Mensaje",
+              "displayName": "Mensaje",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Fecha",
+              "displayName": "Fecha",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        624,
+        -16
+      ],
+      "id": "381a259b-2cbd-45fb-9630-4907fbe91c13",
+      "name": "Append or update row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "eoeDXwFrmv52ej9z",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "benjaminmillalonc@gmail.com",
+        "subject": "Nuevo mensaje recibido",
+        "message": "=Hola, el cliente {{ $('Webhook').item.json.body.nombre }} envio un mensaje al asistente.",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        336,
+        -16
+      ],
+      "id": "c0a66a9d-ed66-4977-9f4a-20a5db9e81f8",
+      "name": "Send a message",
+      "webhookId": "09e34238-44f6-42b4-bcb9-c37904dfd096",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "867buXwxW8WLwVq2",
+          "name": "Gmail account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "Notifica al equipo",
+        "height": 128,
+        "width": 208
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        288,
+        -64
+      ],
+      "typeVersion": 1,
+      "id": "c54517e1-59cf-452c-9077-d40f08551786",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "content": "Guarda los datos en Google Sheets",
+        "height": 128,
+        "width": 224
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        560,
+        -64
+      ],
+      "typeVersion": 1,
+      "id": "4af2b66f-deb8-49b9-8594-7df964a48208",
+      "name": "Sticky Note4"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append or update row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "ad99ea93-9756-482f-a061-c89635ae989c",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "a6f86e6b1a7c21ce4c2fc1183b54d89c82854030e511e1baeed1b0c053cc45f3"
+  },
+  "id": "azzmDZwIgpWjSdEw",
+  "tags": []
+}
