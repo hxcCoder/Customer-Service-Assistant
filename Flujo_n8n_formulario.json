@@ -1,0 +1,267 @@
+{
+  "name": "Formulario web",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "Recibe los datos del formulario",
+        "height": 128,
+        "width": 192
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -144,
+        -64
+      ],
+      "typeVersion": 1,
+      "id": "9400ff5a-ba33-4348-bd0b-316e5851ecd2",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "Limpia, edita y renombra los campos",
+        "height": 128,
+        "width": 192
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        64,
+        -64
+      ],
+      "typeVersion": 1,
+      "id": "eeec6f44-beb1-4c52-bd81-cba3c2275ab3",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "Responde usando inteligencia artificial GPT-4 (nodo ya integrado)."
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        832,
+        -96
+      ],
+      "typeVersion": 1,
+      "id": "cc9824cd-ef2e-46e7-8696-68352343eb2d",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "Notifica al equipo",
+        "height": 128,
+        "width": 208
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        288,
+        -64
+      ],
+      "typeVersion": 1,
+      "id": "c54517e1-59cf-452c-9077-d40f08551786",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "content": "Guarda los datos en Google Sheets",
+        "height": 128,
+        "width": 224
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        560,
+        -64
+      ],
+      "typeVersion": 1,
+      "id": "4af2b66f-deb8-49b9-8594-7df964a48208",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "test-form",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -96,
+        -16
+      ],
+      "id": "22b5225c-4df2-4831-9a4c-d6c4f99ad3e8",
+      "name": "Datos recibidos",
+      "webhookId": "07dffe94-4970-42ab-9c10-f538f873203b"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        112,
+        -16
+      ],
+      "id": "d3794a7b-96ff-4798-86ae-9afc35392042",
+      "name": "Editar/limpiar los datos(Opcional)"
+    },
+    {
+      "parameters": {
+        "subject": "Nuevo mensaje recibido",
+        "message": "=Hola, el cliente {{ $('Datos recibidos').item.json.body.nombre }} envio un mensaje al asistente.",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        336,
+        -16
+      ],
+      "id": "c0a66a9d-ed66-4977-9f4a-20a5db9e81f8",
+      "name": "Mensaje Gmail",
+      "webhookId": "09e34238-44f6-42b4-bcb9-c37904dfd096",
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "",
+          "mode": "id"
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        624,
+        -16
+      ],
+      "id": "381a259b-2cbd-45fb-9630-4907fbe91c13",
+      "name": "Actualizacion de los datos",
+    },
+    {
+      "parameters": {
+        "content": "Conectar el API key del modelo a eleccion.",
+        "height": 80
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        832,
+        96
+      ],
+      "typeVersion": 1,
+      "id": "bc5d2705-d73c-450d-9819-632c9f90c1d1",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "content": "Ingresar credenciales.",
+        "height": 80
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        176,
+        144
+      ],
+      "typeVersion": 1,
+      "id": "5195ab0d-2ee1-480d-bc07-c69af9ef9f09",
+      "name": "Sticky Note6"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4.1",
+          "mode": "list",
+          "cachedResultName": "GPT-4.1"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "Eres un asistente de atención. Clasifica el siguiente mensaje en una de estas categorías: 'reclamo', 'consulta', 'venta', 'soporte técnico'. Devuelve solo la categoría.",
+              "role": "system"
+            },
+            {
+              "content": "={{ $json.Mensaje }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        896,
+        -16
+      ],
+      "id": "3dfa0568-ea74-412b-a5d2-b6c58ed437a2",
+      "name": "Respuesta AI",
+      "alwaysOutputData": true,
+      "retryOnFail": true,
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Datos recibidos": {
+      "main": [
+        [
+          {
+            "node": "Editar/limpiar los datos(Opcional)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Editar/limpiar los datos(Opcional)": {
+      "main": [
+        [
+          {
+            "node": "Mensaje Gmail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mensaje Gmail": {
+      "main": [
+        [
+          {
+            "node": "Actualizacion de los datos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Actualizacion de los datos": {
+      "main": [
+        [
+          {
+            "node": "Respuesta AI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "8e158b7f-1a1f-40a4-887d-5dc4a163a65f",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "a6f86e6b1a7c21ce4c2fc1183b54d89c82854030e511e1baeed1b0c053cc45f3"
+  },
+  "id": "azzmDZwIgpWjSdEw",
+  "tags": []
+}
