@@ -12,7 +12,7 @@ Este proyecto es una solución inteligente y escalable para automatizar la atenc
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-- 💡 Ideal para freelancers, pequeñas empresas o agencias que desean mejorar la eficiencia sin depender de herramientas de pago o complejas integraciones.
+ 💡 Ideal para freelancers, pequeñas empresas o agencias que desean mejorar la eficiencia sin depender de herramientas de pago o complejas integraciones.
   --
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Flujo:
