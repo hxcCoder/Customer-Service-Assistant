@@ -2,142 +2,135 @@
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Asistente de Atención al Cliente con IA y Automatización (n8n + OpenAI)
+Customer Service Assistant with AI and Automation (n8n + OpenAI)
 -
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Este proyecto es una solución inteligente y escalable para automatizar la atención al cliente usando un formulario web, procesamiento con IA (GPT), almacenamiento en Google Sheets y notificaciones por correo electrónico.
-
+This project is a smart and scalable solution for automating customer service using a web form, AI-powered processing (GPT), Google Sheets storage, and email notifications.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- 💡 Ideal para freelancers, pequeñas empresas o agencias que desean mejorar la eficiencia sin depender de herramientas de pago o complejas integraciones.
+ 💡 Ideal for freelancers, small businesses, or agencies looking to improve efficiency without relying on paid tools or complex integrations.
   --
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Flujo:
+Flow:
 -
 ![Flow](https://github.com/user-attachments/assets/6cac5d79-3f2d-44d7-96f1-d8c919ca6977)
 
-
-¿Qué hace este proyecto?:
+What does this project do?:
   --
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-🔹 Recoge información de un formulario web personalizado (nombre, correo y mensaje).
+🔹 Collect information from a custom web form (name, email, and message).
 
-🔹 Usa n8n para procesar y automatizar el flujo.
+🔹 Use n8n to process and automate the flow.
 
-🔹 Envía el mensaje del usuario a un modelo de lenguaje (OpenAI) para generar una respuesta inteligente.
+🔹 Send the user's message to a language model (OpenAI) to generate an intelligent response.
 
-🔹 Guarda los datos en una planilla de Google Sheets para su posterior análisis.
+🔹 Save the data in a Google Sheets spreadsheet for further analysis.
 
-🔹 Envía notificaciones por email o Telegram con la información procesada.
+🔹 Send email or Telegram notifications with the processed information.
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-🛠️ Tecnologías utilizadas
+🛠️ Technologies used
 -
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-- HTML/CSS para el frontend del formulario.
+- HTML/CSS for the form frontend.
 
-- n8n (orquestador visual de flujos de trabajo).
+- n8n (visual workflow orchestrator).
 
-- OpenAI API para generación de respuestas inteligentes.
+- OpenAI API for generating smart responses.
 
-- Google Sheets API para almacenar los datos.
+- Google Sheets API for storing data.
 
-- SMTP / Telegram API para notificaciones automáticas.
+- SMTP / Telegram API for automatic notifications.
 
-- Docker + Docker Compose para desarrollo local y portabilidad.
-
+- Docker + Docker Compose for local development and portability.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-🎯 Casos de uso reales
+🎯 Real-life use cases
 -
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-- ✅ Atención al cliente automatizada para sitios web o ecommerce.
+- ✅ Automated customer service for websites or e-commerce sites.
 
-- ✅ Formulario de contacto que responde automáticamente con IA.
+- ✅ Contact form that responds automatically with AI.
 
-- ✅ Registro de leads o consultas en hojas de cálculo.
+- ✅ Recording of leads or inquiries in spreadsheets.
 
-- ✅ Notificaciones internas al equipo de ventas o soporte.
+- ✅ Internal notifications to the sales or support team.
 
-- ✅ Automatización de respuestas a encuestas o solicitudes.
+- ✅ Automation of responses to surveys or requests.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-⚙️ Cómo ejecutarlo localmente
+⚙️ How to run it locally
 -
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-1.  Clonar el repositorio
+1. Clone the repository
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    git clone https://github.com/tuusuario/asistente-ia-n8n.git
-    cd asistente-ia-n8n
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+git clone https://github.com/youruser/ia-n8n-assistant.git
+cd ia-n8n-assistant
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-2.  Levantar n8n con Docker
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        docker-compose up -d
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Launch n8n with Docker
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+docker-compose up -d
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-3. Acceder a n8n y configurar el flujo
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Access n8n and configure the workflow
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--Abre http://localhost:5678
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- Open http://localhost:5678
 
+- Import the included workflow (workflow.json)
 
--Importa el flujo incluido (workflow.json)
+- Replace your credentials (OpenAI, Gmail, Google Sheets)
+---
+4. Test the form
 
+---
+-Open the index.html file in your browser and send a message.
 
--Reemplaza tus credenciales (OpenAI, Gmail, Google Sheets)
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-4.  Probar el formulario
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--Abre el archivo index.html en tu navegador y envía un mensaje.
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-📦 Próximas mejoras
+---
+📦 Upcoming improvements
 -
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--🌍 Publicar el formulario en un dominio propio (Netlify, Vercel).
+---
+-🌍 Publish the form on your own domain (Netlify, Vercel).
 
--💬 Agregar traducción automática si el mensaje está en otro idioma.
+-💬 Add automatic translation if the message is in another language.
 
--📊 Visualización de estadísticas desde Sheets o Grafana.
+-📊 View statistics from Sheets or Grafana.
 
--🔐 Autenticación de usuarios para seguimiento de tickets.
+-🔐 User authentication for ticket tracking.
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-💼 ¿Que puede hacer?
+---
+💼 What can it do?
 -
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
-- Integrar IA y automatización real en flujos de negocio.
+- Integrate AI and real automation into business flows.
 
-- Trabajar con APIs reales y servicios usados en la industria.
+- Work with real APIs and services used in the industry.
 
-- Resolver un problema concreto y común: atención al cliente eficiente.
+- Solve a specific and common problem: efficient customer service.
 
-- Escalar fácilmente a nuevas funcionalidades o plataformas.
+- Easily scale to new features or platforms.
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-🏆 Este tipo de soluciones ya han sido adoptadas por múltiples startups y freelancers como MVP funcional para clientes reales.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🏆 These types of solutions have already been adopted by multiple startups and freelancers as a functional MVP for real clients.
 -
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-📩 Contacto
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+📩 Contact
 -
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-¿Te interesa colaborar o mejorar esta solución? ¡Estoy disponible para propuestas freelance o trabajo remoto!
+Are you interested in collaborating or improving this solution? I'm available for freelance proposals or remote work!
 
-Autor: [Benjamin] Email: [benjaminmillalonc@gmail.com] LinkedIn: []Portafolio: [tu-sitio.com]
+Author: [Benjamin] Email: [benjaminmillalonc@gmail.com] LinkedIn: [] Portfolio: [your-site.com]
 
-¡Gracias por revisar este proyecto! ⭐ Si te gustó, dale una estrella al repo o compártelo.
-
+Thanks for checking out this project! ⭐ If you liked it, give the repo a star or share it.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
