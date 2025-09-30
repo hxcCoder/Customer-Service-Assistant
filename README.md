@@ -2,12 +2,10 @@
 
 Customer Service Assistant with AI and Automation (n8n + OpenAI)
 -
-
-
-This project is a smart and scalable solution for automating customer service using a web form, AI-powered processing (GPT), Google Sheets storage, and email notifications.
+Descripcion
 -
-
- 💡 Ideal for freelancers, small businesses, or agencies looking to improve efficiency without relying on paid tools or complex integrations.
+This project is a smart and scalable solution for automating customer service using a web form, AI-powered processing (GPT), Google Sheets storage, and email notifications.
+ 💡 the small businesses, or agencies looking to improve efficiency without relying on paid tools or complex integrations can use this.
   -
   
 Flow:
@@ -15,9 +13,8 @@ Flow:
 ![Flow](https://github.com/user-attachments/assets/6cac5d79-3f2d-44d7-96f1-d8c919ca6977)
 
 What does this project do?:
-  
+-
 
---
 🔹 Collect information from a custom web form (name, email, and message).
 
 🔹 Use n8n to process and automate the flow.
@@ -110,16 +107,6 @@ docker-compose up -d
 - Solve a specific and common problem: efficient customer service.
 
 - Easily scale to new features or platforms.
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-🏆 These types of solutions have already been adopted by multiple startups and freelancers as a functional MVP for real clients.
--
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-📩 Contact
--
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-Are you interested in collaborating or improving this solution? I'm available for freelance proposals or remote work!
 
 Author: [Benjamin] Email: [benjaminmillalonc@gmail.com] LinkedIn: [] Portfolio: [your-site.com]
 
