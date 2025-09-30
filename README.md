@@ -6,6 +6,7 @@ Description
 -
 This project is a smart and scalable solution for automating customer service using a web form, AI-powered processing (GPT), Google Sheets storage, and email notifications.
  💡 the small businesses, or agencies looking to improve efficiency without relying on paid tools or complex integrations can use this.
+ 
   -
   
 Flow:
