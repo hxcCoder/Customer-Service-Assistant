@@ -3,14 +3,13 @@
 Customer Service Assistant with AI and Automation (n8n + OpenAI)
 -
 
--
 
 This project is a smart and scalable solution for automating customer service using a web form, AI-powered processing (GPT), Google Sheets storage, and email notifications.
+-
 
--
  💡 Ideal for freelancers, small businesses, or agencies looking to improve efficiency without relying on paid tools or complex integrations.
-  --
--
+  -
+  
 Flow:
 -
 ![Flow](https://github.com/user-attachments/assets/6cac5d79-3f2d-44d7-96f1-d8c919ca6977)
@@ -29,12 +28,9 @@ What does this project do?:
 
 🔹 Send email or Telegram notifications with the processed information.
 
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🛠️ Technologies used
 -
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - HTML/CSS for the form frontend.
 
 - n8n (visual workflow orchestrator).
@@ -46,11 +42,9 @@ What does this project do?:
 - SMTP / Telegram API for automatic notifications.
 
 - Docker + Docker Compose for local development and portability.
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-
 🎯 Real-life use cases
 -
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - ✅ Automated customer service for websites or e-commerce sites.
 
 - ✅ Contact form that responds automatically with AI.
