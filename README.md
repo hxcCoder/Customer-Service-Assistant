@@ -82,18 +82,6 @@ docker-compose up -d
 -Open the index.html file in your browser and send a message.
 
 ---
-📦 Upcoming improvements
--
----
--🌍 Publish the form on your own domain (Netlify, Vercel).
-
--💬 Add automatic translation if the message is in another language.
-
--📊 View statistics from Sheets or Grafana.
-
--🔐 User authentication for ticket tracking.
-
----
 💼 What can it do?
 -
 ---
