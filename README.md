@@ -37,7 +37,7 @@ What does this project do?:
 - SMTP / Telegram API for automatic notifications.
 
 - Docker + Docker Compose for local development and portability.
--
+- 
 🎯 Real-life use cases
 -
 - ✅ Automated customer service for websites or e-commerce sites.
